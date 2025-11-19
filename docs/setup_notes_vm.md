@@ -2,12 +2,12 @@
 
 ## 1. VM Creation (Compute Engine)
 ![VM Creation](../screenshots/vm/vm_creation.png)
-Steps I performed:
-- Opened **Compute Engine → VM Instances → Create Instance**  
+Steps:
+- Opened **Compute Engine** and then **VM Instances** and **Create Instance**  
 - Name: `mysql-vm`
 - Region: **us-central1**
 - Machine type: **e2-micro (free tier)**
-- OS: **Ubuntu 22.04 LTS**
+- OS: **Ubuntu**
 - BEFORE creating, I enabled SSH through browser.
 - Created the VM.
 
@@ -26,8 +26,10 @@ Steps I performed:
 ![MySQL Status](../screenshots/vm/mysql_status.png)
 
 - Open SSH terminal and input
-``sudo apt update``
-``sudo apt install -y mysql-server``
+``
+sudo apt update
+sudo apt install -y mysql-server
+``
 - Check status using ``systemctl status mysql``
 
 ## 4. Allow Remote MySQL Connections
@@ -43,18 +45,30 @@ Steps I performed:
 ![MySQL Version](../screenshots/vm/mysql_version.png)
 
 - Enter MySQL ``sudo mysql``
-- I used these commands ``CREATE DATABASE class_db_anitliu; CREATE USER 'anita'@'%' IDENTIFIED BY 'password'; GRANT ALL PRIVILEGES ON class_db_anitliu.* TO 'anita'@'%'; FLUSH PRIVILEGES;``
+- I used these commands 
+```
+CREATE DATABASE class_db_anitliu; 
+CREATE USER 'anita'@'%' IDENTIFIED BY 'password'; 
+GRANT ALL PRIVILEGES ON class_db_anitliu.* TO 'anita'@'%'; 
+FLUSH PRIVILEGES;
+```
 - Exit
 
 ## 6. Python
-- I used these commands ``python3 -m venv .venv; source .venv/bin/activate; pip install sqlalchemy pymysql pandas python-dotenv cryptography``
+- I used these commands 
+``
+python3 -m venv .venv; source .venv/bin/activate; 
+pip install sqlalchemy pymysql pandas python-dotenv cryptography
+``
 - I made sure my .env was right. In this case its 
+    ```
     # VM
     VM_DB_HOST=136.114.86.186
     VM_DB_PORT=3306
     VM_DB_USER=anita
     VM_DB_PASS=password
     VM_DB_NAME=class_db_anitliu
+    ```
 
 ## 7. Run vm_demo.py
 ![Show Tables (Empty)](../screenshots/vm/show_tables_empty.png)
