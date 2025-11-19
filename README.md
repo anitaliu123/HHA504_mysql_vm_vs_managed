@@ -23,22 +23,25 @@ Each script:
 
 ## 2. Repository Layout
 
+```text
 HHA504_mysql_vm_vs_managed/
-├─ README.md
-├─ .gitignore                  # Make sure to ignore your .env 
-├─ .env.example                # Do NOT commit real secrets
-├─ scripts/
-│   ├─ vm_demo.py              # SQLAlchemy+pandas against VM MySQL
-│   └─ managed_demo.py         # SQLAlchemy+pandas against managed MySQL
-├─ sql/
-│   └─ init.sql                # Optional: user/db bootstrap you ran on VM
-├─ screenshots/
-│   ├─ vm/                     # VM portal, firewall, daemon status, CLI, etc.
-│   └─ managed/                # Managed service creation, connection details
-└─ docs/
-    ├─ setup_notes_vm.md
-    ├─ setup_notes_managed.md
-    └─ comparison.md           # timing & difficulty comparison
+├── README.md
+├── .gitignore              # ignore .env
+├── .env.example            # template; no real secrets
+├── scripts/
+│   ├── vm_demo.py          # SQLAlchemy+pandas against VM MySQL
+│   └── managed_demo.py     # SQLAlchemy+pandas against Cloud SQL
+├── sql/
+│   └── init.sql            # optional bootstrap
+├── screenshots/
+│   ├── vm/                 # VM portal, firewall, CLI, queries
+│   └── managed/            # Cloud SQL creation + queries
+└── docs/
+    ├── setup_notes_vm.md
+    ├── setup_notes_managed.md
+    └── comparison.md
+```
+
 
 ## Steps
 ### VM Path
@@ -66,18 +69,18 @@ HHA504_mysql_vm_vs_managed/
 ## Screenshots
 ### VM Screenshots
 
-![VM Creation](../screenshots/vm/vm_creation.png)
-![Firewall Port 3306](../screenshots/vm/firewall_3306.png)
-![MySQL bind-address editing](../screenshots/vm/mysql_bind_address.png)
-![MySQL bind-address running](../screenshots/vm/mysql_bind_address_running.png)
-![MySQL Status](../screenshots/vm/mysql_status.png)
-![mysql -version](../screenshots/vm/mysql_version.png)
-![Show tables (empty)](../screenshots/vm/show_tables_empty.png)
-![vm_demo.py Output](../screenshots/vm/vm_demo_output.png)
-![VM Final SSH](../screenshots/vm/finalssh.png)
+![VM Creation](screenshots/vm/vm_creation.png)
+![Firewall Port 3306](screenshots/vm/firewall_3306.png)
+![MySQL bind-address editing](screenshots/vm/mysql_bind_address.png)
+![MySQL bind-address running](screenshots/vm/mysql_bind_address_running.png)
+![MySQL Status](screenshots/vm/mysql_status.png)
+![mysql -version](screenshots/vm/mysql_version.png)
+![Show tables (empty)](screenshots/vm/show_tables_empty.png)
+![vm_demo.py Output](screenshots/vm/vm_demo_output.png)
+![VM Final SSH](screenshots/vm/finalssh.png)
 
 ### Managed Screenshots
-![Authorized Networks](../screenshots/managed/authorized_networks.png)
-![Managed Demo Output](../screenshots/managed/managed_demo_output.png)
-![Cloud SQL Show Databases](../screenshots/managed/show_databases.png)
-![Cloud SQL Final Query](../screenshots/managed/managed_finalssh.png)
+![Authorized Networks](screenshots/managed/authorized_networks.png)
+![Managed Demo Output](screenshots/managed/managed_demo_output.png)
+![Cloud SQL Show Databases](screenshots/managed/show_databases.png)
+![Cloud SQL Final Query](screenshots/managed/managed_finalssh.png)

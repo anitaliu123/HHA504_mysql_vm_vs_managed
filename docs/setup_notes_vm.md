@@ -57,7 +57,8 @@ FLUSH PRIVILEGES;
 ## 6. Python
 - I used these commands 
 ``
-python3 -m venv .venv; source .venv/bin/activate; 
+python3 -m venv .venv; 
+source .venv/bin/activate; 
 pip install sqlalchemy pymysql pandas python-dotenv cryptography
 ``
 - I made sure my .env was right. In this case its 

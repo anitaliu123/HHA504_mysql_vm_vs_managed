@@ -55,20 +55,20 @@ FLUSH PRIVILEGES;
 - I also installed these dependencies ``pip install sqlalchemy pymysql pandas python-dotenv cryptography``
 
 ## 6.Run managed_demo.py
-- python scripts/managed_demo.py
+- Ran this command in the terminal ```python scripts/managed_demo.py```
 
 ![Managed Demo Output](../screenshots/managed/managed_demo_output.png)
 
 ## 7. Validate Data in Cloud SQL
 - Reconnected to Cloud Shell and used this: ``gcloud sql connect mysql-managed --user=root --quiet``
-- and then used:  
+- Then used:  
 ```
 USE class_db_anitliu; 
 SHOW TABLES; 
 SELECT * FROM visits;
 ```
 
-![Cloud SQL Final Query](../screenshots/managed/managed_finalssh.png)"
+![Cloud SQL Final Query](../screenshots/managed/managed_finalssh.png)
 
 ## Total Time: ~45 minutes
 
