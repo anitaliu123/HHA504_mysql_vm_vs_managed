@@ -6,6 +6,7 @@ This project compares two ways to run MySQL on GCP: a self-managed MySQL server 
 2. **Managed MySQL using Cloud SQL for MySQL**
 
 Both are accessed from Python using **SQLAlchemy + pandas**. 
+
 Each script:
 
 - Loads credentials from `.env`
@@ -17,8 +18,8 @@ Each script:
 ## 1. Cloud & Region
 
 - **Cloud:** Google Cloud Platform  
+- **Region:** `us-central1`  
 - **VM zone:** `us-central1-a` 
-- **Cloud SQL region:** `us-central1`  
 - **Video Link:** [Tutorial](https://drive.google.com/file/d/1c6hXg7J6sjG51a35Pkng9d9ED92E2jvA/view?usp=sharing)
 
 ## 2. Repository Layout

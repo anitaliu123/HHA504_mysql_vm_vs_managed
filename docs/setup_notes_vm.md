@@ -84,10 +84,12 @@ pip install sqlalchemy pymysql pandas python-dotenv cryptography
 
 ## 8. Validate in SSH
 - I then used these commands 
-    ``sudo mysql``
-    `` USE class_db_anitliu;``
-    `` SHOW TABLES;``
-    ``SELECT * FROM visits;``
+    ``
+    sudo mysql
+    USE class_db_anitliu;
+    SHOW TABLES;
+    SELECT * FROM visits;
+    ``
 
 ![VM Final SSH Query](../screenshots/vm/finalssh.png)
 
